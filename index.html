@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FCP Verano - Top 10</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6dc8f9;
+            --text-color: #333;
+            --background-color: #f5f8fa;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f2f5;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .logo-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a1a1a;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 25px 0;
+            font-size: 1.1rem;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 1rem;
+            background: white;
+        }
+
+        th {
+            background:var(--primary-color);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.95rem;
+        }
+        :root {
+            --primary-color: #6dc8f9;
+            --text-color: #333;
+            --background-color: #f5f8fa;
+        }
+
+
+        th:first-child {
+            border-top-left-radius: 12px;
+        }
+
+        th:last-child {
+            border-top-right-radius: 12px;
+        }
+
+        tr:last-child td:first-child {
+            border-bottom-left-radius: 12px;
+        }
+
+        tr:last-child td:last-child {
+            border-bottom-right-radius: 12px;
+        }
+
+        td {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            background: white;
+            transition: all 0.2s ease;
+        }
+
+        tr:nth-child(even) td {
+            background: #f8fafc;
+        }
+
+        tr:hover td {
+            background: #e0e7ff;
+            transform: scale(1.01);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 0.75rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <script src="/static/app.js" defer></script>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="static/logo.png" alt="Logo" class="logo">
+    </div>
+    <div class="container">
+        <h1>FCP Verano - Top 10</h1>
+        <table>
+            <tr>
+                <th>Puesto</th>
+                <th>Stand</th>
+                <th># Votos</th>
+            </tr>
+            <tbody id="standings">
+            </tbody>
+        </table>
+    </div>
+<div class="footer">
+    <p>Powered by <a href="https://kayari.pe" target="_blank">Café Kayari</a>, compra tu café con descuento y recíbelo en el stand de Nodos Café haciendo click <a href="https://kayari.pe" target="_blank">aquí</a></p>
+    </div>
+</body>
+</html>
